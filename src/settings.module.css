@@ -1,0 +1,73 @@
+.budgetformStyle{
+    padding-top: 45px;
+    margin-bottom: 30px;
+}
+.budgetlabelStyle{
+    margin-top: 55px;
+    margin-left: 300px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: larger;
+
+}
+.budgettextStyle{
+    margin-left: -80px;
+}
+.cancelStyle{
+    margin-left: -185px;
+}
+.archiveStyle{
+    margin-left: -160px;
+}
+.categorylabelStyle{
+    margin-left: 300px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: larger;
+    margin-bottom: 40px;
+}
+.categorytextStyle{
+    margin-left: -80px;
+}
+.categorybuttonStyle{
+    margin-left: -185px;
+}
+.catdelStyle{
+    margin-left: 300px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: larger;
+}
+.categoryselectStyle{
+    margin-left: -340px;
+}
+.categorydeleteStyle{
+    margin-left: 0px;
+}
+.listStyle{
+    margin-left: 5px;
+    margin-top: 100px;
+    margin-right: 5px;
+}
+.viewStyle{
+    float: right;
+}
+.deleteStyle{
+    float: right;
+}
+
+
+
+
+/* 
+.budgetStyle{
+    margin-top: 50px;
+    margin-left: 410px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size:larger;
+    width: 500px;
+}
+
+.categoryStyle{
+    margin-left: 410px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: larger;
+    width: 500px;
+} */

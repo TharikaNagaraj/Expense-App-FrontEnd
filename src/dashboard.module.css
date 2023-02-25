@@ -1,0 +1,42 @@
+
+.bodyStyle{
+    overflow: hidden;
+}
+
+.donutchartStyle{
+    margin-top: -25px;
+    margin-left: 5px;
+    max-height: 450px;
+    /* max-width: 450px; */
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size:55px;
+    font-weight: 600;
+}
+.piechartStyle{
+    margin-top:-345px;
+    margin-left: 1100px;
+    overflow: hidden;
+}
+.paraStyle{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-top: 50px;
+    margin-left: 400px;
+    font-size:25px;
+    font-weight: 600;
+    color:saddlebrown;
+}
+.addbtnStyle{
+    margin-top: 10px;
+    margin-left: 1295px;
+   
+}
+.deletebtnStyle{
+    margin-top:-38.5px ;
+    margin-left:1335px ;
+}
+.placeholderStyle{
+    height: 300px;
+    width: 200px;
+    margin-left: 1250px;
+    margin-top: -420px;
+}

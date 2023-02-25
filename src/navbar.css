@@ -1,0 +1,22 @@
+.bg-bgStyle{
+    background-color:deepskyblue;
+}
+.imgStyle{
+    margin-left: 20px;
+}
+.dashboardStyle{
+    margin-left: 100px;
+    margin-right: 100px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.settingsStyle{
+    margin-right: 100px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.profileStyle{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-right: 600px;
+}           
+.logoutStyle{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}

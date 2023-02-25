@@ -1,0 +1,36 @@
+.bgStyle{
+    background-image: url("../src/expense-app-image.jpg");
+    background-color: bisque;
+    width: 100%;
+    height: 100vh;
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    overflow: hidden;
+}
+.labelStyle{
+    margin-top: 80px;
+    margin-left: 150px;
+    color: teal;
+    margin-bottom: 20px;
+}
+
+
+.nameStyle{
+    margin-left: 150px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+.emailStyle{
+    margin-left: 150px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+.pwdStyle{
+    margin-left: 150px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+.buttonStyle{
+    margin-left: 150px;
+}

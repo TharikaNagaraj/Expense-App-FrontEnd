@@ -1,0 +1,19 @@
+
+.nameStyle{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size:x-large;
+    margin-right: 625px;
+    margin-left: 25px;
+}
+.occupationStyle{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size:x-large;
+    margin-left: 25px;
+    
+}       
+.photoStyle{
+    height: 200px;
+    width: 150px;
+    margin-left: 125px;
+    
+}

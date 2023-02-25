@@ -1,0 +1,29 @@
+/* .chartStyle{
+    margin-top: -65px;
+    margin-left: 40px;
+    max-height: 450px;
+    max-width: 450px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size:23px;
+    font-weight: 600;
+} */
+
+/* .piechartStyle{
+    margin-top: -45px;
+    margin-left: 1000px;
+} */
+
+.chart1Style{
+    margin-left: 10px;
+    margin-right: 50px;
+    /* margin-bottom: 350px; */
+}
+.chart2Style{
+    margin-top: -350px;
+    margin-left: 1000px;
+}
+.myStyle{
+    padding-top: 80px;
+    margin-left: 60px;
+    
+}
