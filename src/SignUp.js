@@ -4,6 +4,9 @@ import signupcss from "../src/signup.module.css"
 import isEmail from "../node_modules/validator/lib/isEmail"
 import axios from 'axios'
 import swal from 'sweetalert2'
+import { useSelector,useDispatch } from 'react-redux'
+import {startUserRegister} from './actions/userActions'
+
 
 const SignUp = (props) => 
 {
@@ -14,38 +17,45 @@ const SignUp = (props) =>
     const [formData,setFormData] = useState({})
     let formObj = {}
     let errObj = {}
+    const dispatch = useDispatch()
+    const userData = useSelector((state) => 
+    {
+        return state.user
+    })
+    useEffect(() => 
+    {
+        console.log('userData',userData)
+        if(userData.length > 0)
+        {
+            const keys = Object.keys(userData[0])
+            const values = Object.values(userData[0])
+            console.log('keys',keys)
+            if((keys.includes("index")) || (keys.includes("code")) || (keys.includes("keyPattern")) || (keys.includes("keyValue")))
+            {
+                swal.fire({
+                    title:"Account already exists!",
+                    text:"Login with your email and password"
+                })
+                props.history.push("/")
+            }
+            else
+            {
+                swal.fire({
+                    icon :'success',
+                    title :'Account creation successful',
+                    text : 'You are now redirected to the login page'
+                })
+                props.history.push("/")
+            }
+        }
+        
+    },[userData])
     useEffect(() => 
     {
         if(Object.keys(formData).length >0)
         {
-            axios.post("http://localhost:3050/api/users/register",formData)
-                .then((user) =>
-                {
-                    const result = user.data
-                    if(result.hasOwnProperty("_id"))
-                    {
-                        swal.fire({
-                            icon :'success',
-                            title :'Account creation successful',
-                            text : 'You are now redirected to the login page'
-                        })
-                        props.history.push("/")
-                    }
-                    else if(result.keyValue.email == formData.email)
-                    {
-                        // alert("Account already exists! Login with your email and password")
-                        swal.fire(
-                            'Account already exists!',
-                            "Login with your email and password"
-                        )
-                        props.history.push("/")
-                    }
-                    
-                })
-                .catch((err) => 
-                {
-                    console.log(err)
-                })
+            const url = "http://localhost:3050/api/users/register"
+            dispatch(startUserRegister(url,formData))
         }
     },[formData])
 
@@ -54,17 +64,17 @@ const SignUp = (props) =>
         const input = e.target.value
         if(e.target.name == 'name')
         {
-            console.log(input)
+            // console.log(input)
             setName(input)
         }
         else if(e.target.name == 'email')
         {
-            console.log(input)
+            // console.log(input)
             setEmail(input)
         }
         else
         {
-            console.log(input)
+            // console.log(input)
             setPassword(input)
         }
     }
@@ -137,6 +147,9 @@ const SignUp = (props) =>
     {
         setErrData({})
         setFormData({})
+        setName("")
+        setPassword("")
+        setEmail("")
     }
 
     return(
@@ -171,3 +184,59 @@ const SignUp = (props) =>
     )
 }
 export default SignUp
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// if(Object.keys(formData).length >0)
+//         {
+//             const url = "http://localhost:3050/api/users/register"
+//             dispatch(startUserRegister(url,formData))
+            // axios.post("http://localhost:3050/api/users/register",formData)
+            //     .then((user) =>
+            //     {
+            //         console.log('user',user)
+            //         const result = user.data
+            //         if(result.hasOwnProperty("_id"))
+            //         {
+            //             swal.fire({
+            //                 icon :'success',
+            //                 title :'Account creation successful',
+            //                 text : 'You are now redirected to the login page'
+            //             })
+            //             props.history.push("/")
+            //         }
+            //         else if(result.keyValue.email == formData.email)
+            //         {
+            //             // alert("Account already exists! Login with your email and password")
+            //             swal.fire(
+            //                 'Account already exists!',
+            //                 "Login with your email and password"
+            //             )
+            //             props.history.push("/")
+            //         }
+                    
+            //     })
+            //     .catch((err) => 
+            //     {
+            //         console.log(err)
+            //     })
+        // }

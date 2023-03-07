@@ -7,6 +7,7 @@ import { withRouter } from 'react-router-dom'
 const ExpenseNavbar = (props) => 
 {
     const {deleteToken} = props
+    // console.log(deleteToken)
     const style = {
         color:"darkgreen",
         fontSize:"larger",
@@ -27,7 +28,7 @@ const ExpenseNavbar = (props) =>
     const handleLogout = () => 
     {
         deleteToken()
-        props.history.push("/")
+        // props.history.push("/")
     }
     const handleLogo = () => 
     {

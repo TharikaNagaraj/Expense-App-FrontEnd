@@ -6,6 +6,7 @@ import Dashboard from './Dashboard'
 import Settings from './Settings'
 import Profile from './Profile'
 import EditUser from './EditUser'
+import { withRouter } from 'react-router-dom'
 
 
 
@@ -22,13 +23,15 @@ const ExpenseContainer = (props) =>
         // setToken(ele)
         console.log('token in container',ele)
         const tokenWithoutBearer = ele.split(" ")[1]
-        console.log(tokenWithoutBearer)
+        console.log('token without bearer',tokenWithoutBearer)
         localStorage.setItem("token",tokenWithoutBearer)
         setToken(tokenWithoutBearer)        
     }
     const deleteToken = () => 
     {
         localStorage.removeItem("token")
+        setToken("")
+        props.history.push("/")
     }
     return(
         <div>
@@ -68,10 +71,11 @@ const ExpenseContainer = (props) =>
                 return <SignIn
                 {...props}
                 getToken = {getToken}
+                exact = {true}
                 />
             }} exact={true}/>
             <Route path={"/signup"} component={SignUp}/>
         </div>
     )
 }
-export default ExpenseContainer
+export default withRouter(ExpenseContainer) 

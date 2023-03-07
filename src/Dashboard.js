@@ -47,7 +47,7 @@ const Dashboard = (props) =>
     const postExpense = (data) => 
     {
         const result = [...expenses,{...data}]
-        console.log("PE")
+        // console.log("PE")
         // console.log('result',result)
         setExpenses(result)
         let totalAmount = 0
@@ -84,10 +84,10 @@ const Dashboard = (props) =>
         })
             .then((ele) => 
             {
-                console.log(ele)
+                // console.log(ele)
                 const data = ele.data
-                console.log('dash',data)
-                console.log('Amt',data.Amount)
+                // console.log('dash',data)
+                // console.log('Amt',data.Amount)
                 data.forEach((budgetData) => 
                 {
                     console.log('Db',budgetData.Amount)
@@ -109,7 +109,7 @@ const Dashboard = (props) =>
         })
             .then((ele) => 
             {
-                    console.log("expenses-dashboard",ele)
+                    // console.log("expenses-dashboard",ele)
                     if(!(ele.data == "no expenses found"))
                     {
                         setExpenses(ele.data)
@@ -141,7 +141,7 @@ const Dashboard = (props) =>
         })
             .then((ele) =>
             {
-                console.log('categories',ele.data)
+                // console.log('categories',ele.data)
                 setCategories(ele.data)
             })
             .catch((err) => 

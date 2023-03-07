@@ -11,6 +11,7 @@ import Swal from "sweetalert2";
 const Settings = (props) => 
 {
     const {deleteToken} = props
+    // console.log(deleteToken)
     const [budget,setBudget] = useState("")
     const [categories,setCategories] = useState("")
     const [budgetData,setBudgetData] = useState({})
@@ -148,7 +149,7 @@ const Settings = (props) =>
         })
         .then((budget) => 
         {
-            // console.log('budget-settings-get',budget.data)
+            console.log('budget-settings-get',budget.data)
             const result = budget.data
             setBudgetInfo(result)
             // console.log('result',result)
